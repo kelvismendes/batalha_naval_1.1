@@ -1,0 +1,29 @@
+body{
+	background:#3c4e66;
+}
+div#container{
+	display:table;
+	margin:200px auto;
+}
+
+input.txt{
+	margin-top:10px;
+	width:350px;
+	height:40px;
+	border:0;
+	background:#50cae2;
+	text-align:center;
+	font-size:16px;
+	color:#3F6A77;
+	box-shadow:1px 1px 3px  #2d4256;
+}
+button{
+	margin-top:10px;
+	width:350px;
+	height:40px;
+	cursor:pointer;
+	background:#466f81;
+	border:0;
+	color:#ccc;
+	box-shadow:1px 1px 3px #2d4256;
+}

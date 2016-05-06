@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Batalha Naval</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style_tela1_marca_posicoes.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_segunda_etapa.css">
+
+	<!--
+		<script src="../js/script_Marca_Posicao.js"></script>
+		<script src="../js/script_Inimigo_Marcacao.js"></script>
+		<script src="../js/script_afundar_navio_inimigo.js"></script>
+	 -->
+
+	<!-- <script src="../js/script_batalha_naval.js"></script> -->
+	<script src="../js/script_batalha_naval1.2.js"></script>
+</head>
+<body> 
+	<div id="list_Navios">
+		<ul>
+			<li>
+			    <div class="bloco"></div><div class="bloco"></div><div class="bloco"></div><div class="bloco"></div><div class="bloco"></div>
+			</li>
+			<li>
+				<div class="bloco"></div><div class="bloco"></div><div class="bloco"></div><div class="bloco"></div><div class="bloco"></div>
+			</li>
+			<li>
+				<div class="bloco"></div><div class="bloco"></div><div class="bloco"></div><div class="bloco"></div>
+			</li>
+			<li>
+				<div class="bloco"></div><div class="bloco"></div><div class="bloco"></div>
+			</li>
+			<li>
+				<div class="bloco"></div><div class="bloco"></div>
+			</li>
+			<li>
+				<div class="bloco"></div>
+			</li>
+		</ul>	
+		<button type="button" id="but_Iniciar">Iniciar</button>
+	</div>
+
+	<div id="container">
+		<span id="seila">Escolha As Posições Dos Navios</span>
+		
+		<div id="container_marcacoes">
+
+			<table id="tb_marcar_posicoes">
+				<tr>
+					<td id="0" class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="1"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="2"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="3"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="4"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="5"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="6" class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="7"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="8"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="9"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="10"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="11"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+
+				<tr>
+					<td id="12"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="13"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="14"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="15"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="16" class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="17"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="18"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="19"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="20"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="21"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="22"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="23"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+
+				<tr>
+					<td id="24"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="25"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="26"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="27"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="28"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="29"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="30"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="31"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="32"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="33"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="34"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="35"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+
+				<tr>
+					<td id="36"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="37"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="38"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="39"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="40"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="41"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="42"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="43"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="44"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="45"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="46"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="47"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+						
+				</tr>
+
+				<tr>
+					<td id="48"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="49"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td id="50"class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+
+				<tr>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+
+				<tr>
+					
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+
+				<tr>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+					<td class="td_marca_posicoes" onclick="marcar_navios_faltando(id)"></td>
+				</tr>
+			</table>		
+		</div>
+	
+	</div>
+
+	
+
+
+
+	<div id="container_segunda_etapa">
+		
+			<div id="container_mostrar_navios">
+			<table id="tb_mostrar_posicoes">
+				<tr>
+							 <td id="but_mostrar_0" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_2" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_3" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_4" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_5" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_6" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_7" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_8" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_9" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_10" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_11" class="td_mostrar_posicoes"></td>
+				</tr>
+
+				<tr>
+							 <td id="but_mostrar_12" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_13" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_14" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_15" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_16" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_17" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_18" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_19" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_20" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_21" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_22" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_23" class="td_mostrar_posicoes"></td>
+				</tr>
+
+				<tr>
+							 <td id="but_mostrar_24" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_24" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_26	" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+				</tr>
+
+				<tr>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+				</tr>
+
+				<tr>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+				</tr>
+
+				<tr>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+				</tr>
+
+				<tr>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+				</tr>
+
+
+				<tr>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+							 <td id="but_mostrar_1" class="td_mostrar_posicoes"></td>
+				</tr>
+			</table>	
+		</div>
+
+		<div id="controles">
+			<button type="button" id="but_finalizar" onclick="gerar_posicoes_inimigos()">Finalizar Jogada</button>
+		</div>
+
+		<div id="container_mostrar_navios_inimigo">
+			<table id="tb_mostrar_posicoes_inimigo">
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(0)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(1)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(2)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(3)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(4)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(5)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(6)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(7)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(8)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(9)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(10)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(11)"></td>
+				</tr>
+
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(12)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(13)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(14)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(15)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(16)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(17)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(18)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(19)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(20)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(21)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(22)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(23)"></td>
+				</tr>
+
+			    <tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(24)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(25)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(26)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(27)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(28)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(29)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(30)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(31)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(32)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(33)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(34)"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio(35)"></td>
+				</tr>
+
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+				</tr>
+
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+				</tr>
+
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+				</tr>
+
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+				</tr>
+
+				<tr>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+							<td class="td_mostrar_posicoes_inimigo" onclick="afundar_navio()"></td>
+				</tr>
+			</table>	
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+div#container_segunda_etapa{
+	display:table;
+	margin:150px auto;
+}
+
+/* css primeira tabela segunda etapa*/
+
+div#container_mostrar_navios{
+	display:inline-block;
+	width:540px;
+	border:4px solid #294d65;
+	margin-right:20px;
+}
+
+table#tb_mostrar_posicoes{
+	border:1px solid #294d65;
+	display:table;
+	margin:20px auto;
+	padding:4px;
+}
+td.td_mostrar_posicoes{
+	border:1px solid #294d65;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}
+
+/* fim css primeira tabela */
+
+
+
+/* css segunda tabela */
+
+div#container_mostrar_navios_inimigo{
+	width:540px;
+	border:4px solid #294d65;
+	display:inline-block;
+	margin-left:20px;
+
+}
+
+table#tb_mostrar_posicoes_inimigo{
+	border:1px solid #294d65;
+	margin:20px auto;
+	padding:4px;
+}
+td.td_mostrar_posicoes_inimigo{
+	border:1px solid #294d65;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}
+
+
+/* seila : falta fazer alguma coisa aqui */
+
+div#controles{
+	display:inline-block;
+	background:red;
+	position:relative;
+	top:-180px;
+}
+button#but_finalizar{
+	border:1px solid #172C38;
+	padding:10px;
+	background:#294d65;
+	cursor:pointer;
+	text-transform:uppercase;
+	font-size:13px;
+}
