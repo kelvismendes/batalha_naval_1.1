@@ -23,6 +23,7 @@ td.td_mostrar_posicoes{
 	width:35px;
 	height:35px;
 	cursor:pointer;
+	background:#244153;
 }
 
 /* fim css primeira tabela */
@@ -48,7 +49,7 @@ td.td_mostrar_posicoes_inimigo{
 	border:1px solid #294d65;
 	width:35px;
 	height:35px;
-	cursor:pointer;
+background:#244153;
 }
 
 
