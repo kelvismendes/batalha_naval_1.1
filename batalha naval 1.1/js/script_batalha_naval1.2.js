@@ -1,23 +1,64 @@
 /*
 	 função responsavel por marcar os blocos da esquerda,
 	 e dizer quantos navios ainda podem ser marcadaos
+
+	 ao mesmo tempo marca na segunda tabela onde mostra as posições marcadas pelo jogador
 */
-//ao mesmo tempo ela marca na segunda etapa onde o jogador posicionou seus navios
-var corMarcaJogador = "#DB4B49";//cor que vai ser usada pra fazer a marcação
-var contador = 0; //apenas um contador
-function marcar_navios_faltando(valorId){// é passado um parametro pra ela que é o valor da id da posicao clicada (td clicado)
-	 document.getElementById(valorId).style.background = corMarcaJogador;//marcando na primeira tabela
-	 document.getElementById("but_mostrar_"+valorId).style.background = corMarcaJogador;//marcando na segunda tabela(ou segunda etapa)
-	 document.getElementsByClassName("bloco")[contador].style.borderColor = corMarcaJogador;
+var corMarcaJogador = "#DB4B49"; //cor que vais er usada para marca as posições na tabela
+var contador = 0; 
+function marcar_navios_faltando(valorId){ // a função recebe um parâmetro que é a id da posição clicada pelo usuario
+	 document.getElementById(valorId).style.background = corMarcaJogador; //agora o td que possui a id que veio do parametro vai ser marcado com a cor determinada
+	 document.getElementById("but_mostrar_"+valorId).style.background = corMarcaJogador;// ao mesmo tempo marca na segunda tabela os valores que o jogador escolheu pra posicionar os navios
+	 document.getElementsByClassName("bloco")[contador].style.borderColor = corMarcaJogador;//ao mesmo tempo marca quantos navios ainda faltam aplicando css na borda
 	 contador++;
+
+	 /*
+		document.getELementByClassName("NOmeDaCLasse") retorna um array de elementos com a classe detarminada ex:
+		existe  4 elementos com a class ".bloco" se eu usar 
+		
+		var elementos  =  document.getElementByClassName("bloco");
+
+		vou retornar eles dentro de um array
+
+		elementos[0] = esse representa o primeiro elemento
+		elementos[1] = esse representa o segundo elemento
+		elementos[2] ...
+		elementos[3] ...
+		elementos[4] ... 
+
+
+		se não criar uma variavel para armazenar o array vc pode simplesmente acessar os elementos desta forma
+
+		document.getElementsByClassName("bloco")[0] = esse representa o primeiro elemento
+		document.getElementsByClassName("bloco")[1] = esse representa o segundo elemento
+		document.getElementsByClassName("bloco")[3] =   ..... e etc
+
+		nessa função no lugar de terminar um elemento eu coloquei dentro um contador [contador]
+		ou seja, sempre que a função for chamada o contador vai ser acrescentado logo vai ser modificado um outro elemento
+		ex:
+		var contador = 0;
+
+		 document.getElementsByClassName("bloco")[contador].style.backround = "red"; aplicou css no primeiro elemento
+
+		 contador++; agora contador é 1;
+
+	 	document.getElementsByClassName("bloco")[contador].style.backround = "red"; aplicou css no segundo elemento
+
+
+		contador++; agora contador é 2;
+
+		e etc......
+	 */
+
+
+
+
 }
-/*
-	gera as posições que o inimigo vai escolher para o seu navio
-*/
-var array_posicoes_inimigo = [];
+
+var array_posicoes_inimigo = [];//um array javascript que vai armazenar onde vai ficar as posiçõe do inimigo
 function gerar_posicoes_inimigos(){
 	//navio de cinco posições
-	array_posicoes_inimigo[0] = "marcado";
+	array_posicoes_inimigo[0] = "marcado"; 
 	array_posicoes_inimigo[1] = "marcado";
 	array_posicoes_inimigo[2] = "marcado";
 	array_posicoes_inimigo[3] = "marcado";
@@ -44,16 +85,20 @@ function gerar_posicoes_inimigos(){
 	array_posicoes_inimigo[11] = "marcado";
 }
 
-function afundar_navio(valor){
-	var cor_acerto = "#DB4B49";
-	var cor_erro = "#00948A";
-	if(array_posicoes_inimigo[valor]=="marcado"){
+function afundar_navio(valor){// no onclick no html está sendo passado um parâmetro em forma de numero 
+	var cor_acerto = "#DB4B49"; //cor usado caso o jogador acerte um navio inimigo
+	var cor_erro = "#00948A"; //cor usado caso o jogador erre o tiro no navio inimigo
+
+	
+
+	if(array_posicoes_inimigo[valor]=="marcado"){ 
 		document.getElementsByClassName("td_mostrar_posicoes_inimigo")[valor].style.background = cor_acerto;
 	}else{
 		document.getElementsByClassName("td_mostrar_posicoes_inimigo")[valor].style.background = cor_erro;
 	}
 	jogada_inimigo();
 	verificar_vitoria();
+
 }
 
 
